@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bap Er Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <main>
+    <main class="container mx-auto">
         <section id="login">
-            <h1>Welcome to your <span>Bap Er Bank</span>!</h1>
+            <h1 class="text-5xl text-center mt-10 mb-16 font-semibold">Welcome to your <span>Bap Er Bank</span>!</h1>
+            <div class="2xl:w-2/3 xl:w-2/3 mx-auto p-10">
+                <h3 class="text-3xl mb-5">Login</h3>
+                <input type="email" placeholder="your email" class="input input-bordered input-secondary w-full mb-3" />
+                <input type="password" placeholder="your password" class="input input-bordered input-secondary w-full mb-3" />
+                <button class="btn btn-active btn-secondary">Login</button>
+            </div>
         </section>
-        <section id="dashboard"></section>
     </main>
     <script src="./script.js"></script>
 </body>
