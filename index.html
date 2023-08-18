@@ -10,13 +10,44 @@
 </head>
 <body>
     <main class="container mx-auto">
-        <section id="login">
+        <section id="loginSection" class="">
             <h1 class="text-5xl text-center mt-10 mb-16 font-semibold">Welcome to your <span>Bap Er Bank</span>!</h1>
             <div class="2xl:w-2/3 xl:w-2/3 mx-auto p-10">
-                <h3 class="text-3xl mb-5">Login</h3>
-                <input type="email" placeholder="your email" class="input input-bordered input-secondary w-full mb-3" />
-                <input type="password" placeholder="your password" class="input input-bordered input-secondary w-full mb-3" />
-                <button class="btn btn-active btn-secondary">Login</button>
+                <h3 class="text-3xl mb-5">Please Login</h3>
+                <input type="email" id="user-email" placeholder="your email" class="input input-bordered input-secondary w-full mb-3" />
+                <input type="password" id="user-pass" placeholder="your password" class="input input-bordered input-secondary w-full mb-3" />
+                <button class="btn btn-active btn-secondary" id="loginBtn">Login</button>
+            </div>
+        </section>
+
+        <section id="dashboardSection" class="hidden">
+            <h1 class="text-5xl text-center mt-10 mb-20 font-semibold">Welcome to your <span>dashboard</span>!</h1>
+            <div class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 2xl:gap-10 xl:gap-7 lg:gap-5 md:gap-3 gap-3 mx-3">
+                <div class="text-white rounded-md bg-primary p-5">
+                    <h4 class="text-2xl mb-1">Diposit</h4>
+                    <h3 class="text-3xl">$<span id="diposit">00</span></h3>
+                </div>
+                <div class="text-white rounded-md bg-secondary p-5">
+                    <h4 class="text-2xl mb-1">Withdraw</h4>
+                    <h3 class="text-3xl">$<span id="withdraw">00</span></h3>
+                </div>
+                <div class="text-white rounded-md bg-accent p-5">
+                    <h4 class="text-2xl mb-1">Balance</h4>
+                    <h3 class="text-3xl">$<span id="balance">1240</span></h3>
+                </div>
+            </div>
+
+            <div class="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 2xl:gap-10 xl:gap-7 lg:gap-5 md:gap-3 gap-3 mx-3 mt-20 text-white">
+                <div class="bg-green-500 p-5 rounded-md">
+                    <h3 class="text-3xl mb-3">Diposit</h3>
+                    <input type="number" id="dipositAmount" placeholder="$ Amount you want to diposit" class="input input-bordered w-full mb-3" />
+                    <button id="dipositBtn" class="btn btn-active btn-secondary">Diposit</button>
+                </div>
+                <div class="bg-error p-5 rounded-md">
+                    <h3 class="text-3xl mb-3">Withdraw</h3>
+                    <input type="number" id="withdrawAmount" placeholder="$ Amount you want to withdraw" class="input input-bordered w-full mb-3" />
+                    <button id="withdrawBtn" class="btn btn-active btn-secondary">Withdraw</button>
+                </div>
             </div>
         </section>
     </main>
